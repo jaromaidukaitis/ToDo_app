@@ -3,12 +3,20 @@ function generateToDoPage(tasks) {
 
 	tasks.forEach((task) => {
 		cards += `
+			<div>
 				<div class="card m-1" style="width: 18rem;">
 					<div class="card-body">
 						<h5 class="card-title">${task.title}</h5>
 						<p class="card-text">${task.description}</p>
 					</div>
+					<div class="m-3 d-flex justify-content-end">
+						<button type="button" class="btn btn-outline-danger btn-sm mr-2">Arquivar</button>
+      					<button type="button" class="btn btn-outline-secondary btn-sm px-3">Editar</button>      				
+					</div>
+					
 				</div>
+				
+			</div>
 				`;
 	});
 
